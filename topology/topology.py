@@ -64,7 +64,7 @@ def run():
 
         # Keep the alternative path available but inactive initially.
         # This avoids a Layer 2 loop during the initial test.
-        net.configLinkStatus("s3", "s4", "down")
+       # net.configLinkStatus("s3", "s4", "down")
 
         print("\n========== Publish-Subscribe SDN Network ==========")
         print("Controller: {}:{}".format(
@@ -76,7 +76,7 @@ def run():
         print("h4 - Subscriber 2: 10.0.0.4")
         print("\nPrimary path:     s1 -> s2 -> s4")
         print("Alternative path: s1 -> s3 -> s4")
-        print("Alternative link s3-s4 is initially DOWN.")
+        print("Both primary and alternative paths are initially UP.")
         print("\nUseful Mininet commands:")
         print("  pingall")
         print("  net")
