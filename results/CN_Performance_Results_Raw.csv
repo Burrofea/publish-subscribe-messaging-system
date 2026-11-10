@@ -1,0 +1,15 @@
+measurement,path,trial,min_rtt_ms,avg_rtt_ms,max_rtt_ms,packets_sent,packets_received,packet_loss_pct,throughput_gbps,iperf_retransmissions,route_verification,notes
+latency,primary,1,0.064,0.244,0.842,20.0,20.0,0.0,,,verified primary (s1-eth2),20-packet ping
+latency,primary,2,0.064,0.183,0.745,20.0,20.0,0.0,,,verified primary (s1-eth2),20-packet ping
+latency,primary,3,0.064,0.19,0.28,20.0,20.0,0.0,,,verified primary (s1-eth2),20-packet ping
+latency,backup,1,0.07,0.235,1.361,20.0,20.0,0.0,,,verified backup (s1-eth3),Only one backup latency trial collected
+throughput,backup,1,,,,,,,42.1,1801.0,verified backup (s1-eth3),"iperf3, 10 seconds; receiver throughput"
+throughput,backup,2,,,,,,,41.7,975.0,verified backup (s1-eth3),"iperf3, 10 seconds; receiver throughput"
+throughput,backup,3,,,,,,,40.5,2531.0,verified backup (s1-eth3),"iperf3, 10 seconds; receiver throughput"
+throughput,primary_provisional,1,,,,,,,41.7,,provisional; route output not captured at measurement time,"iperf3, 10 seconds; route classification pending"
+throughput,primary_provisional,2,,,,,,,42.5,721.0,provisional; route output not captured at measurement time,"iperf3, 10 seconds; route classification pending"
+throughput,primary_provisional,3,,,,,,,41.8,2481.0,provisional; route output not captured at measurement time,"iperf3, 10 seconds; route classification pending"
+throughput,primary_provisional,4,,,,,,,42.5,503.0,provisional; route output not captured at measurement time,"iperf3, 10 seconds; route classification pending"
+baseline_continuous_ping,normal_network,1,,0.253,,5.0,5.0,0.0,,,normal path before failover experiment,5-packet continuous ping
+baseline_continuous_ping,normal_network,2,,0.271,,3.0,3.0,0.0,,,normal path before failover experiment,3-packet continuous ping
+connectivity,all_hosts,1,,,,12.0,12.0,0.0,,,primary restored; pingall,All 12 host-pair checks succeeded
